@@ -67,12 +67,11 @@ int main()
 		else if (input == "empty") {
 			stack.empty();
 		}
-		else 
+		else
 			stack.pop();
-		
+
 	}
 	return 0;
-
 }
 
 

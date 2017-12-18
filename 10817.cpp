@@ -8,7 +8,7 @@ int main() {
 		if (arr[i] > arr[i + 1]) {
 			int temp = arr[i + 1];
 			arr[i + 1] = arr[i];
-			arr[i] = temp¤±;
+			arr[i] = temp;
 		}
 		if (arr[i + 1] > arr[i + 2]) {
 			int temp = arr[i + 2];

@@ -1,17 +1,10 @@
 #include <stdio.h>
-#include <iostream>
-
-using namespace std;
 
 int main()
 {
-    char a;
-
-     while ((a=getchar())!=EOF){
-     printf("%c", a);
-      }
-     
-   
-      return 0;
-
+    char a[111];
+    while (scanf("%[^\n]\n",a)==1){
+        printf("%s\n", a);
+    }
+    return 0;
 }

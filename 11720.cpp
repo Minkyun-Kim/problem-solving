@@ -1,13 +1,9 @@
-#include <iostream>
-using namespace std;
-int main() {
-	int n, sum=0;
-	char arr[100];
-	cin >> n;
-	cin >> arr;
-	for (int i = 0; i < n; i++) {
-		
-		sum += arr[i]-'0';
-	}
-	cout << sum << endl;
+#include <cstdio>
+int main(){
+    int n, a, sum = 0;
+    scanf("%d\n", &n);
+    while(scanf("%1d\n", &a) && n--){
+        sum += a;
+    }
+    printf("%d", sum);
 }

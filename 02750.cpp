@@ -23,10 +23,10 @@ int main() {
 				break;
 		}
 
-		}
+	}
 	for (int i = 0; i < num; i++)
 		cout << p[i] << endl;
-	}
+}
 
 
 

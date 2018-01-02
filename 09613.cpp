@@ -3,7 +3,7 @@
 #include <vector>
 using namespace std;
 
-int gcd(int a, int b){
+long long gcd(long long a, long long b){
     if (b == 0)
         return a;
     else
@@ -11,13 +11,14 @@ int gcd(int a, int b){
 }
 
 int main(){
-    int n, m, a;
+    int n, m;
     cin >> n;
     while(n--){
         cin >> m;
         vector<int> v;
-        int sum = 0;
+        long long sum = 0;
         for( int i = 0; i < m; i++){
+            long long a;
             cin >> a;
             v.push_back(a);
         }

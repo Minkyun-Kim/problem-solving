@@ -12,10 +12,10 @@ int main() {
 	int n;
 	cin >> n;
 	int i = 1;
-	do {
+	while(!(n == 1)) {
 		n = c(n);
 		i++;
-	} while (!(n == 1));
+	}
 	cout << i << endl;
 }
 

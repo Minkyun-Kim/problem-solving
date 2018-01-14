@@ -18,7 +18,7 @@ int main(){
 
     /*
        while(k != 0){
-        while(k <= v[i]){
+        while(k < v[i]){// k <= v[i]로 하면 1 1 1 에서 런타임 에러 뜸
             i--;
         }
         ans += k / v[i];

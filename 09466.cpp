@@ -1,13 +1,18 @@
 #include <iostream>
 using namespace std;
-int a[1001];
-bool check[1001];
+int a[100001];
+int d[100001];
+int s[100001];
 
-bool dfs(int i){
-    if(dfs(a[i]) == true)
-        return;
-    check[i] = true;
-    dfs(a[i]);
+int dfs(int x, int cnt, int &step){
+    if(d[x] != 0){
+        if(step != s[x])
+            return 0;
+        return cnt - d[x];
+    }
+    d[x] = cnt;
+    s[x] = step;
+    return dfs(a[x], cnt+1, step);
 }
 
 int main(){
@@ -20,16 +25,16 @@ int main(){
         cin >> n;
         for(int i = 1; i <= n; i++){
             cin >> a[i];
-            check[i] = false;
+            d[i] = 0;
+            s[i] = 0;
         }
         int ans = 0;
         for(int i = 1; i <= n; i++){
-            if(check[i] == false){
-                dfs(i);
-                ans++;
+            if(d[i] == 0){
+                ans += dfs(i, 1, i);
             }
-        }
-        cout << ans << '\n';
+        }    
+        cout << n - ans << '\n';
     }
     return 0;
 }

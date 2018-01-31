@@ -1,29 +1,11 @@
 #include <cstdio>
 #include <queue>
 using namespace std;
-int earth[52][52];
-int check[52][52];
-int dx[] = {-1, 0, 1, 0,};
-int dy[] = {0, 1, 0,  -1,};
-void bfs(int i,int j){
-    queue<pair<int, int> > q;
-    q.push({i, j});
-    check[i][j] = 1;
-    while(!q.empty()){
-        pair<int, int> pr = q.front();
-        q.pop();
-        for(int i = 0; i < 4; i++){
-            int nx = pr.first + dx[i];
-            int ny = pr.second + dy[i];
-            if(check[nx][ny] == 0 && earth[nx][ny] == 1){
-                q.push({nx, ny});
-                if(check[nx][ny] == 0 || check[nx][ny] > check[pr.first][pr.second]+1){
-                    check[nx][ny] = check[pr.first][pr.second] + 1;               
-                }
-            }
-        }
-    }
-}
+int earth[102][102];
+int check[102][102];
+int dist[102][102];
+int dx[] = {-1, 0, 1, 0};
+int dy[] = {0, 1, 0, -1};
 
 
 int main(){
@@ -34,6 +16,26 @@ int main(){
             scanf("%1d", &earth[i][j]);
         }
     }
-    bfs(1, 1);
-    printf("%d\n", check[n][m]);
+    
+    queue<pair<int, int> > q;
+    q.push({1, 1});
+    check[1][1] = 1;
+    dist[1][1] = 1;
+    while(!q.empty()){
+        pair<int, int> pr = q.front();
+        q.pop();
+        for(int i = 0; i < 4; i++){
+            int nx = pr.first + dx[i];
+            int ny = pr.second + dy[i];
+            if(1 <= nx && nx <= n && 1 <= ny && ny <= m){
+                if(check[nx][ny] == 0 && earth[nx][ny] == 1){
+                    q.push({nx, ny});
+                    dist[nx][ny] = dist[pr.first][pr.second] + 1;
+                    check[nx][ny] = 1;
+                }
+            }
+        }
+    }
+    printf("%d\n", dist[n][m]);
+    return 0;
 }

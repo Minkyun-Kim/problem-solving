@@ -25,12 +25,10 @@ int main(){
         for(int i = 0; i < 4; i++){
             int nx = pr.first + dx[i];
             int ny = pr.second + dy[i];
-            if(1 <= nx && nx <= n && 1 <= ny && ny <= m){
                 if(dist[nx][ny] == 0 && earth[nx][ny] == 1){
                     q.push({nx, ny});
                     dist[nx][ny] = dist[pr.first][pr.second] + 1;
                 }
-            }
         }
     }
     printf("%d\n", dist[n][m]);

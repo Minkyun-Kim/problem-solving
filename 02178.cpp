@@ -2,7 +2,6 @@
 #include <queue>
 using namespace std;
 int earth[102][102];
-int check[102][102];
 int dist[102][102];
 int dx[] = {-1, 0, 1, 0};
 int dy[] = {0, 1, 0, -1};
@@ -19,7 +18,6 @@ int main(){
     
     queue<pair<int, int> > q;
     q.push({1, 1});
-    check[1][1] = 1;
     dist[1][1] = 1;
     while(!q.empty()){
         pair<int, int> pr = q.front();
@@ -28,10 +26,9 @@ int main(){
             int nx = pr.first + dx[i];
             int ny = pr.second + dy[i];
             if(1 <= nx && nx <= n && 1 <= ny && ny <= m){
-                if(check[nx][ny] == 0 && earth[nx][ny] == 1){
+                if(dist[nx][ny] == 0 && earth[nx][ny] == 1){
                     q.push({nx, ny});
                     dist[nx][ny] = dist[pr.first][pr.second] + 1;
-                    check[nx][ny] = 1;
                 }
             }
         }

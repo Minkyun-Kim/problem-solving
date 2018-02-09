@@ -14,6 +14,9 @@ int main(){
         d[i] = a[i];
         if( i==0)
             continue;
+        /*
+           d[i-1]+a[i]랑 a[i]랑 비교해서 큰거 가져가기.
+         */
         if(d[i] < d[i-1] + a[i])
             d[i] = d[i-1] + a[i];
     }

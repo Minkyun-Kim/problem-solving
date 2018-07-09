@@ -1,56 +1,54 @@
-nclude <iostream>
+#include <iostream>
 #include <vector>
 #include <queue>
-#include <algorithm>
 using namespace std;
-const int dx[] = {0, 0, -1, 1};
-const int dy[] = {-1, 1, 0, 0};
-bool check[101][101];
+
+int work[10001];
+vector<int> v[10001];
+int d[10001];
+int ind[10001];
 
 int main(){
-        ios_base::sync_with_stdio(false); cin.tie(0);
-            int n, m, k;
-                cin >> n >> m >> k;
-                    for(int i = 0; i < k; i++){
-                                int a, b, c, d;
-                                        cin >> a >> b >> c >> d;
-                                                for(int i = a; i < c; i++){
-                                                                for(int j = b; j < d; j++){
-                                                                                    check[i][j] = 1;
-                                                                                                }
-                                                                        }
-                                                    }
-                        vector<int> ans;
-                            queue<pair<int, int> > q;
-                                for(int i = 0; i < n; i++){
-                                            for(int j = 0; j < m; j++){
-                                                            if(check[i][j])
-                                                                                continue;
-                                                                        int cnt = 0;
-                                                                                    check[i][j] = 1;
-                                                                                                q.push({i, j});
-                                                                                                            while(!q.empty()){
-                                                                                                                                pair<int, int> pr = q.front();
-                                                                                                                                                q.pop();
-                                                                                                                                                                cnt++;
-                                                                                                                                                                                for(int i = 0; i < 4; i++){
-                                                                                                                                                                                                        int nx = pr.first + dx[i], ny = pr.second + dy[i];
-                                                                                                                                                                                                                            if(nx < 0 || ny < 0 || nx >= n || ny >= m)
-                                                                                                                                                                                                                                                        continue;
-                                                                                                                                                                                                                                                if(!check[nx][ny]){
-                                                                                                                                                                                                                                                                            check[nx][ny] = 1;
-                                                                                                                                                                                                                                                                                                    q.push({nx, ny});
-                                                                                                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                                                }
-                                                                                                                                                                                            }
-                                                                                                                        ans.push_back(cnt);
-                                                                                                                                }
-                                                }
-                                    sort(ans.begin(), ans.end());
-                                        cout << ans.size() << '\n';
-                                            for(int i = 0; i < ans.size(); i++){
-                                                        cout << ans[i] << ' ';
-                                                            }
-                                                cout << '\n';
-                                                    return 0;
+    int n;
+    cin >> n;
+    for(int i = 1; i <= n; i++){
+        int cnt;
+        cin >> cnt;
+        for(int i = 0; i < cnt; i++){
+            int from;
+            cin >> from;
+            v[from].push_back(i);
+            ind[i] += 1;
+        }
+    }
+    queue<int> q;
+    for(int i = 0; i <= n; i++){
+        if(ind[i] == 0){
+            q.push(i);
+            d[i] = work[i];//초기 ind==0 인 작업시간을 기록
+        }
+    }
+    while(!q.empty()){
+        int x = q.front();
+        q.pop();
+        for(int i = 0; i <= v[x].size(); i++){
+            int y = v[x][i];
+            ind[y] -= 1;
+            if(d[y] < d[x] + work[y]){
+                d[y] = d[x] + work[y];
+            }
+            if(ind[y] == 0){
+                q.push(y);
+            }
+        }
+    }
+
+    int ans = 0;
+    for(int i = 1; i <=n ; i++){
+        if(ans < d[i] ){
+            ans = d[i];
+        }
+    }
+    cout << ans << '\n';
+    return 0;
 }

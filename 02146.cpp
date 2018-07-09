@@ -16,7 +16,7 @@ int main(){
             cin >> land[i][j];
         }
     }
-
+    //집단에 번호를 붙여주기.
     int cnt = 0;
     for (int i = 0; i < n; i++){
         for (int j = 0; j < n; j++){
@@ -43,7 +43,7 @@ int main(){
             }
         }
     }
-
+    //집단에 해당하는 부분은 거리를 0으로 해준다. 이외의 부분은 -1.
     queue<pair<int, int> > q;
     for(int i = 0; i < n; i++){
         for (int j = 0; j < n; j++){
@@ -54,7 +54,7 @@ int main(){
             }
         }
     }
-
+    //-1인 부분을 집단으로부터 +1 해줘 거리를 점차 늘려나간다.
     while(!q.empty()){
         int x = q.front().first;
         int y = q.front().second;
@@ -71,7 +71,7 @@ int main(){
             }
         }
     }
-    
+    //거리가 가장 긴 부분을 찾아 출력한다.
     int ans = -1;
     for(int i = 0; i < n; i++){
         for(int j = 0; j < n; j++){

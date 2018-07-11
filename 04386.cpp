@@ -27,7 +27,7 @@ int find(int node){
 void merge(int from, int to){
     int x = find(from);
     int y = find(to);
-    parent[from] = to;
+    parent[x] = y;
 }
 
 int main(){
@@ -56,7 +56,7 @@ int main(){
         int to = pq.top().to;
         double cost = pq.top().cost;// 연결할 간선 추출
         ans += cost;//별 사이의 거리 더하기
-        merge(parent[from], parent[to]);//두 별 연결
+        merge(from, to);//두 별 연결
         while(!pq.empty()){
             if( find(pq.top().from) == find(pq.top().to) )//다음 추출할 간선이 사이클을 구성하면 버림
                 pq.pop();

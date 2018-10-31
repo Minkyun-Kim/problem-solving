@@ -13,22 +13,19 @@ int main(){
         for(int j = 0; j < ring.length(); j++){
             if(ring[j] == s[0]){
                 for(int k = 0; k < s.size(); k++){
-                    if(j+k >= ring.length())
-                        j -= ring.length();
-                    if(ring[j+k] != s[k])
+                    if(ring[(j+k)%ring.size()] != s[k])
                         break;
                     if(k == s.size()-1){
                         ans++;
                         flag = 1;
                     }
                 }
-                if(flag = 1){
+                if(flag == 1){
                     flag = 0;
                     break;
                 }
-            }           
+            }
         }
     }
     cout << ans << '\n';
-    return 0;
 }

@@ -12,6 +12,9 @@ the source codes that kakao have taken for the blind recruitment.
 
 #### 1. 오픈채팅방 : https://programmers.co.kr/learn/courses/30/lessons/42888  
  
+#### 2. 실패율 : 
+https://programmers.co.kr/learn/courses/30/lessons/42889
+
 ### 2017 : https://programmers.co.kr/learn/challenges?selected_part_id=12286
 
 #

@@ -16,6 +16,8 @@ the source codes that kakao have taken for the blind recruitment.
 
 #### 3. 후보키 : https://programmers.co.kr/learn/courses/30/lessons/42890
 
+#### 4. 무지의 먹방 라이브 : https://programmers.co.kr/learn/courses/30/lessons/42891
+
 ### 2017 : https://programmers.co.kr/learn/challenges?selected_part_id=12286
 
 #

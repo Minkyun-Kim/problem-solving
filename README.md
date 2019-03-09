@@ -21,4 +21,7 @@ the source codes that kakao have taken for the blind recruitment.
 #
 
 ### SAMSUNG - samsung coding test for recruitment
+
+#### 4013. 특이한 자석: https://swexpertacademy.com/main/solvingProblem/solvingProblem.do
+
 https://www.acmicpc.net/workbook/view/1152

@@ -14,6 +14,7 @@ the source codes that kakao have taken for the blind recruitment.
 #### 후보키 : https://programmers.co.kr/learn/courses/30/lessons/42890
 #### 무지의 먹방 라이브 : https://programmers.co.kr/learn/courses/30/lessons/42891
 #### 길 찾기 게임 : https://programmers.co.kr/learn/courses/30/lessons/42892
+#### 블록 게임 : https://programmers.co.kr/learn/courses/30/lessons/42894
 
 ### 2017 KAKAO BLIND RECRUITMENT : https://programmers.co.kr/learn/challenges?selected_part_id=12286
 #### 뉴스 클러스터링 : https://programmers.co.kr/learn/courses/30/lessons/17677
@@ -21,7 +22,6 @@ the source codes that kakao have taken for the blind recruitment.
 #### 비밀지도 : https://programmers.co.kr/learn/courses/30/lessons/17681
 #### 다트 게임 : https://programmers.co.kr/learn/courses/30/lessons/17682
 #### 프렌즈4블록 : https://programmers.co.kr/learn/courses/30/lessons/17679
-#### 블록 게임 : https://programmers.co.kr/learn/courses/30/lessons/42894
 
 ### 2018 서머코딩
 #### 숫자 게임 : https://programmers.co.kr/learn/courses/30/lessons/12987

@@ -23,6 +23,7 @@ the source codes that kakao have taken for the blind recruitment.
 #### 다트 게임 : https://programmers.co.kr/learn/courses/30/lessons/17682
 #### 프렌즈4블록 : https://programmers.co.kr/learn/courses/30/lessons/17679
 #### 셔틀벼스 : https://programmers.co.kr/learn/courses/30/lessons/17678
+#### 추석 트래픽 : https://programmers.co.kr/learn/courses/30/lessons/17676
 
 ### 2018 서머코딩
 #### 숫자 게임 : https://programmers.co.kr/learn/courses/30/lessons/12987

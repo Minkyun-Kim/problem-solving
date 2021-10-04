@@ -1,6 +1,6 @@
-/*
-N Queen 문제. Backtracking을 이용해 푼다. 이전 문제는 정답이 되는 체스판 그림을 출력해야 했지만 이번엔 정답이 되는 경우를 카운팅만 하면 되기 때문에 pruning 한 경우 갯수만 올려준다. 
-*/
+/**
+ * N Queen 문제. Backtracking을 이용해 푼다. 이전 문제는 정답이 되는 체스판 그림을 출력해야 했지만 이번엔 정답이 되는 경우를 카운팅만 하면 되기 때문에 pruning 한 경우 갯수만 올려준다.
+ */
 class Solution {
     int sum = 0;
     int n;

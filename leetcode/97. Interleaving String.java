@@ -1,6 +1,6 @@
-/*
-DP문제. 메모이제이션을 이용한다. map[i][j]의 의미가 중요하다. map[i][j]는 s1의 i번째, s2의 j번째 substring을 이용하여 s3의 i+j-1번째 스트링까지 만들수 있는지, 없는지를 의미한다. map[i][j]가 true이면 map[i][j+1]은 s2[j+1]이 s3[i+j]와 같다면 역시 true로 보고 해당 인덱스까지는 s1와 s2의 조합으로 완성된다고 볼 수 있다.
-*/
+/**
+ * DP문제. 메모이제이션을 이용한다. map[i][j]의 의미가 중요하다. map[i][j]는 s1의 i번째, s2의 j번째 substring을 이용하여 s3의 i+j-1번째 스트링까지 만들수 있는지, 없는지를 의미한다. map[i][j]가 true이면 map[i][j+1]은 s2[j+1]이 s3[i+j]와 같다면 역시 true로 보고 해당 인덱스까지는 s1와 s2의 조합으로 완성된다고 볼 수 있다.
+ */
 class Solution {
     public boolean isInterleave(String s1, String s2, String s3) {
         if(s1.length() + s2.length() != s3.length())

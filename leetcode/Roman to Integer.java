@@ -17,7 +17,6 @@ class Solution {
             sum += cur < prev ? -cur : cur;
             prev = cur;
         }
-        
         return sum; 
     }
 }
